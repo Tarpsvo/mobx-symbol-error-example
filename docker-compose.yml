@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build: frontend
+    volumes:
+      - ./frontend:/code
+      - /code/node_modules
+      - /code/.next
+    ports:
+      - 3000:3000
+version: '3.4'
