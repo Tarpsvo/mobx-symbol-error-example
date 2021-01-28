@@ -1,8 +1,8 @@
 services:
   frontend:
-    build: frontend
+    build: .
     volumes:
-      - ./frontend:/code
+      - .:/code
       - /code/node_modules
       - /code/.next
     ports:

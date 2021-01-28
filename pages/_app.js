@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import PropTypes from 'prop-types';
+import { observer } from 'mobx-react';
+import GlobalContextProvider from 'global-context';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const App = ({ Component, pageProps }) => (
+  <GlobalContextProvider>
+    <Component {...pageProps} />
+  </GlobalContextProvider>
+);
 
-export default MyApp
+App.propTypes = {};
+
+export default observer(App);
